@@ -16,7 +16,7 @@ private let badgeLabelTag = 817
 
 extension UIView {
     //All UIView Can Use
-    func setBadge(badgeID: Int, _ badgeNum: Int = 0, _ badgeColor: UIColor = UIColor.red, _ badgeAnimate: Bool = false, _ badgeToIcon: Bool = false) {
+    func setBadge(badgeID: Int, badgeNum: Int, badgeColor: UIColor = UIColor.red, badgeAnimate: Bool = false, badgeToIcon: Bool = false) {
         removeBadge(badgeID: badgeID)
         
         let badgeView = UIView()
@@ -63,7 +63,7 @@ extension UIView {
         }
     }
     
-    func changeBadgeNum(badgeID: Int, _ newBadgeNum: Int, _ badgeToIcon: Bool = false) {
+    func changeBadgeNum(badgeID: Int, newBadgeNum: Int, badgeToIcon: Bool = false) {
         for i in self.subviews {
             if i.tag == badgeLabelTag + badgeID {
                 (i as! UILabel).text = "\(newBadgeNum)"
@@ -74,7 +74,7 @@ extension UIView {
         }
     }
     
-    func removeBadge(badgeID: Int, _ badgeToIcon: Bool = false) {
+    func removeBadge(badgeID: Int, badgeToIcon: Bool = false) {
         for i in self.subviews {
             if i.tag == badgeViewTag + badgeID || i.tag == badgeLabelTag + badgeID {
                 i.removeFromSuperview()
@@ -86,7 +86,7 @@ extension UIView {
     }
     
     //Just UITableViewCell Can Use To Make Cell Perform Better
-    func setBadgeForCell(badgeID: Int, badgeForText: Bool, _ badgeNum: Int = 0, _ badgeColor: UIColor = UIColor.red, _ badgeAnimate: Bool = false, _ badgeToIcon: Bool = false, _ badgeText: String = "") {
+    func setBadgeForCell(badgeID: Int, badgeNum: Int, badgeForText: Bool = false, badgeColor: UIColor = UIColor.red, badgeAnimate: Bool = false, badgeToIcon: Bool = false, badgeText: String = "") {
         removeBadgeForCell(badgeID: badgeID)
         
         let badgeView = UIView()
@@ -159,7 +159,7 @@ extension UIView {
         }
     }
     
-    func changeBadgeNumForCell(badgeID: Int, _ newBadgeNum: Int, _ badgeToIcon: Bool = false) {
+    func changeBadgeNumForCell(badgeID: Int, newBadgeNum: Int, badgeToIcon: Bool = false) {
         for i in self.subviews {
             if i.tag == badgeLabelTag + badgeID {
                 (i as! UILabel).text = "\(newBadgeNum)"
@@ -170,7 +170,7 @@ extension UIView {
         }
     }
     
-    func removeBadgeForCell(badgeID: Int, _ badgeToIcon: Bool = false) {
+    func removeBadgeForCell(badgeID: Int, badgeToIcon: Bool = false) {
         for i in self.subviews {
             if i.tag == badgeViewTag + badgeID || i.tag == badgeLabelTag + badgeID {
                 i.removeFromSuperview()

@@ -44,7 +44,7 @@ class SFBadgeDemoTableViewController: UITableViewController {
             for indexPath in indexPathArray! {
                 let cell = self.tableView.cellForRow(at: indexPath)
                 if indexPath.row == 0 {
-                    cell?.setBadgeForCell(badgeID: 10, badgeForText: false, 50, UIColor.red, true, true, "")
+                    cell?.setBadgeForCell(badgeID: 10, badgeNum: 50, badgeForText: false, badgeColor: UIColor.red, badgeAnimate: true, badgeToIcon: true, badgeText: "")
                 }
             }
         }
@@ -54,7 +54,7 @@ class SFBadgeDemoTableViewController: UITableViewController {
             for indexPath in indexPathArray! {
                 let cell = self.tableView.cellForRow(at: indexPath)
                 if indexPath.row == 1 {
-                    cell?.setBadgeForCell(badgeID: 11, badgeForText: true, 0, UIColor.red, true, false, "SFBadgeForCell")
+                    cell?.setBadgeForCell(badgeID: 11, badgeNum: 0, badgeForText: true, badgeColor: UIColor.clear, badgeAnimate: true, badgeToIcon: false, badgeText: "SFBadgeForCell")
                 }
             }
         }
