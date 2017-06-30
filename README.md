@@ -7,13 +7,13 @@ Just download my project, then copy SFBadge.swift to your project, that's all!
 ## Use
 You can use it easily by:
 ```swift
-testButton.setBadge(badgeID: 1, 10) //You set badge number 10.
-cell.setBadgeForCell(badgeID: 2, badgeForText: false)
+testButton.setBadge(badgeID: 1, badgeNum: 10) //You set badge number 10.
+cell.setBadgeForCell(badgeID: 2, badgeNum: 10)
 ```
 Or you can customize more by:
 ```swift
-testButton.setBadge(badgeID: 3, 10, UIColor.red, false, false)
-cell.setBadgeForCell(badgeID: 4, badgeForText: true, 0, UIColor.red, true, false, "SFBadgeForCell")
+testButton.setBadge(badgeID: 3, badgeNum: 10, badgeColor: UIColor.red, badgeAnimate: false, badgeToIcon: false)
+cell.setBadgeForCell(badgeID: 4, badgeNum: 0, badgeForText: true, badgeColor: UIColor.clear, badgeAnimate: true, badgeToIcon: false, badgeText: "SFBadgeForCell")
 ```
 ## Others
 I will update the README after my final exam.
